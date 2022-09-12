@@ -1,29 +1,26 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import * as S from "./styled";
+import React from "react";
 import { BASE_URL } from "../../routes/routes";
-import Search from "../../components/Search";
+import * as S from "./styled";
 
-const HomePage = () => {
+type SubmitButtonProps = {
+  value: String;
+};
+
+const SubmitButton = ({ value }: SubmitButtonProps) => {
   const getData = () => {
     axios
-      .get(BASE_URL + "charmander")
+      .get(BASE_URL + value)
       .then((response) => {
         console.log("res", response.data);
       })
       .catch((error) => console.log("error", error));
   };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <S.Container>
-      Pokédex
-      <Search />
+      <button onClick={getData}>Submit</button>
     </S.Container>
   );
 };
 
-export default HomePage;
+export default SubmitButton;
