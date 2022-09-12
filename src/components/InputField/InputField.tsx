@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./styled";
 
 type InputFieldProps = {
-  onChangeText: (event: string) => void;
+  onChangeText: (inputData: string) => void;
 };
 
 const InputField = ({ onChangeText }: InputFieldProps) => {
