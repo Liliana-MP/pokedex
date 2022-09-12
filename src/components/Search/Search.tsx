@@ -3,17 +3,17 @@ import InputField from "../InputField";
 import SubmitButton from "../SubmitButton";
 
 const Search = () => {
-  const [input, setInput] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   const onChangeText = (event: string) => {
     console.log("evemt", event);
-    setInput(event);
+    setSearchValue(event);
   };
 
   return (
     <div>
       <InputField onChangeText={onChangeText} />
-      <SubmitButton value={input} />
+      <SubmitButton searchValue={searchValue} />
     </div>
   );
 };

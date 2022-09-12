@@ -1,18 +1,21 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { BASE_URL } from "../../routes/routes";
 import * as S from "./styled";
 
 type SubmitButtonProps = {
-  value: String;
+  searchValue: string;
 };
 
-const SubmitButton = ({ value }: SubmitButtonProps) => {
+const SubmitButton = ({ searchValue }: SubmitButtonProps) => {
+  const [pokeData, setPokeData] = useState({});
+  console.log("pokeData", pokeData);
+
   const getData = () => {
     axios
-      .get(BASE_URL + value)
+      .get(BASE_URL + searchValue)
       .then((response) => {
-        console.log("res", response.data);
+        setPokeData(response.data);
       })
       .catch((error) => console.log("error", error));
   };
