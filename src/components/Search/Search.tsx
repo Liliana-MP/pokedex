@@ -2,23 +2,17 @@ import React, { useState } from "react";
 import InputField from "../InputField";
 import SubmitButton from "../SubmitButton";
 
-const Search = () => {
-  const [searchValue, setSearchValue] = useState("");
-  const [pokeData, setPokeData] = useState({});
-  console.log("pokeData hej", pokeData);
+type SearchProps = {
+  savePokemon: (data: any) => void;
+  onChangeText: (inputData: string) => void;
+  searchValue: string;
+};
 
-  const onChangeText = (event: string) => {
-    setSearchValue(event);
-  };
-
-  const savedData = (data: {}) => {
-    setPokeData(data);
-  };
-
+const Search = ({ savePokemon, onChangeText, searchValue }: SearchProps) => {
   return (
     <div>
       <InputField onChangeText={onChangeText} />
-      <SubmitButton searchValue={searchValue} setPokeData={savedData} />
+      <SubmitButton searchValue={searchValue} savePokemon={savePokemon} />
     </div>
   );
 };
