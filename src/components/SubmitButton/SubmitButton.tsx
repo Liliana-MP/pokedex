@@ -5,12 +5,10 @@ import * as S from "./styled";
 
 type SubmitButtonProps = {
   searchValue: string;
+  setPokeData: (data: any) => void;
 };
 
-const SubmitButton = ({ searchValue }: SubmitButtonProps) => {
-  const [pokeData, setPokeData] = useState({});
-  console.log("pokeData", pokeData);
-
+const SubmitButton = ({ searchValue, setPokeData }: SubmitButtonProps) => {
   const getData = () => {
     axios
       .get(BASE_URL + searchValue)
