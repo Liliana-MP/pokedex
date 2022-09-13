@@ -5,8 +5,9 @@ export const Style = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 body {
-    background-color: white;
+    background-color: pink;
 }
 `;

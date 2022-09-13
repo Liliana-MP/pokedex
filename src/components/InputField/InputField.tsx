@@ -8,7 +8,7 @@ type InputFieldProps = {
 const InputField = ({ onChangeText }: InputFieldProps) => {
   return (
     <S.Container>
-      <input
+      <S.Input
         onChange={(e) => {
           onChangeText(e.target.value);
         }}

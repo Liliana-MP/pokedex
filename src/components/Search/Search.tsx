@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import InputField from "../InputField";
 import SubmitButton from "../SubmitButton";
+import * as S from "./styled";
 
 type SearchProps = {
   savePokemon: (data: any) => void;
@@ -10,10 +10,10 @@ type SearchProps = {
 
 const Search = ({ savePokemon, onChangeText, searchValue }: SearchProps) => {
   return (
-    <div>
+    <S.Container>
       <InputField onChangeText={onChangeText} />
       <SubmitButton searchValue={searchValue} savePokemon={savePokemon} />
-    </div>
+    </S.Container>
   );
 };
 

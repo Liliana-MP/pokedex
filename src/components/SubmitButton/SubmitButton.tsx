@@ -8,7 +8,7 @@ type SubmitButtonProps = {
 const SubmitButton = ({ searchValue, savePokemon }: SubmitButtonProps) => {
   return (
     <S.Container>
-      <button onClick={() => savePokemon(searchValue)}>Submit</button>
+      <S.Button onClick={() => savePokemon(searchValue)}>Submit</S.Button>
     </S.Container>
   );
 };
