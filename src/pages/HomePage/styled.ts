@@ -19,7 +19,7 @@ export const PokedexContainer = styled.div`
   border-radius: 0.5rem;
 `;
 
-export const InfoText = styled.p`
+export const PokeStats = styled.p`
   margin: 1.5rem 0rem;
   line-height: 170%;
   font-size: 1rem;

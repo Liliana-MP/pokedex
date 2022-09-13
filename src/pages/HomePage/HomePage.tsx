@@ -33,7 +33,9 @@ const HomePage = () => {
           onChangeText={onChangeText}
           savePokemon={savePokemon}
         />
-        <PokeData pokemon={pokemon} />
+        <S.PokeStats>
+          <PokeData pokemon={pokemon} />
+        </S.PokeStats>
       </S.PokedexContainer>
     </S.Container>
   );

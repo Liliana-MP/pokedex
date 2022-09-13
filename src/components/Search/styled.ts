@@ -5,5 +5,5 @@ export const Container = styled.div`
   justify-content: space-around;
   background-color: violet;
   display: flex;
-  width: 20%;
+  width: 40%;
 `;
