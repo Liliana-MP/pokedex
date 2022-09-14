@@ -9,6 +9,7 @@ const InputField = ({ onChangeText }: InputFieldProps) => {
   return (
     <S.Container>
       <S.Input
+        placeholder="Search here"
         onChange={(e) => {
           onChangeText(e.target.value);
         }}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Pokemon } from "../../types";
+import { getBackground } from "../../utils";
 import * as S from "./styled";
 
 type PokeDataProps = {
@@ -8,37 +9,15 @@ type PokeDataProps = {
 
 const PokeData = ({ pokemon }: PokeDataProps) => {
   const pokeImageFront = pokemon?.sprites.front_default;
-  let background = "";
+  let pokeType = "";
 
   pokemon?.types.map((type) => {
-    const pokeType = type.type.name.toLocaleLowerCase();
-    if (pokeType === "fire") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/5/56/Pokémon_Fire_Type_Icon.svg)");
-    } else if (pokeType === "normal") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/a/aa/Pok%C3%A9mon_Normal_Type_Icon.svg)");
-    } else if (pokeType === "grass") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg)");
-    } else if (pokeType === "bug") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg)");
-    } else if (pokeType === "water") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg)");
-    } else if (pokeType === "poison") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg)");
-    } else if (pokeType === "electric") {
-      return (background =
-        "url(https://upload.wikimedia.org/wikipedia/commons/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg)");
-    }
+    pokeType = type.type.name.toLocaleLowerCase();
   });
 
   if (pokemon) {
     return (
-      <S.Container backgroundImage={background}>
+      <S.Container backgroundImage={getBackground(pokeType)}>
         <S.PokeNameContainer>
           <h1>{pokemon.name.toLocaleUpperCase()}</h1>
         </S.PokeNameContainer>

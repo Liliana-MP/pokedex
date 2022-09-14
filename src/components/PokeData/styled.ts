@@ -14,7 +14,6 @@ export const Container = styled.div<StyledProps>`
 
 export const PokeNameContainer = styled.div`
   justify-content: center;
-  background-color: cyan;
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 0.3rem;
@@ -23,7 +22,6 @@ export const PokeNameContainer = styled.div`
 export const Logo = styled.span`
   color: black;
   font-size: 1.8rem;
-  font-family: "Lobster Two";
   font-weight: bold;
   letter-spacing: 0.3rem;
 `;

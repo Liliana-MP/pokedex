@@ -8,6 +8,6 @@ export const Style = createGlobalStyle`
   
 }
 body {
-    background-color: pink;
+
 }
 `;

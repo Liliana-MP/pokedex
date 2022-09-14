@@ -8,13 +8,12 @@ export const Header = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: green;
+  background-color: lightcoral;
 `;
 
 export const Logo = styled(Link)`
   text-decoration: none;
   color: violet;
   font-size: 1.8rem;
-  font-family: "Lobster Two";
   font-weight: bold;
 `;

@@ -19,12 +19,21 @@ const HomePage = () => {
       .then((response) => {
         setPokemon(response.data);
       })
-      .catch((error) => toast("nppb"));
+      .catch((error) =>
+        toast.error("ERROR", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+      );
   };
 
   return (
     <S.Container>
-      <ToastContainer />
       <S.PokedexContainer>
         <Search
           searchValue={searchValue}
