@@ -17,13 +17,7 @@ const HomePage = () => {
   const savePokemon = (searchValue: string) => {
     getPokemon(searchValue)
       .then((response) => {
-        setPokemon({
-          name: response.data.name,
-          stats: response.data.stats,
-          abilities: response.data.abilities,
-          types: response.data.types,
-          images: response.data.sprites,
-        });
+        setPokemon(response.data);
       })
       .catch((error) => toast("nppb"));
   };

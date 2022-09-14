@@ -7,7 +7,7 @@ type PokeDataProps = {
 };
 
 const PokeData = ({ pokemon }: PokeDataProps) => {
-  const pokeImage = pokemon?.images;
+  const pokeImage = pokemon?.sprites;
   if (pokeImage) {
     console.log("pokeimage", pokeImage.back_default);
   }
