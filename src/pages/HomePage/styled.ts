@@ -24,9 +24,6 @@ export const PokedexContainer = styled.div`
 
 export const PokeStats = styled.div`
   margin: 1.5rem 0rem;
-  line-height: 170%;
-  font-size: 1rem;
-  background-color: green;
   display: flex;
   width: 80%;
 `;
