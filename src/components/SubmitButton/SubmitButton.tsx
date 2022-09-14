@@ -6,9 +6,12 @@ type SubmitButtonProps = {
 };
 
 const SubmitButton = ({ searchValue, savePokemon }: SubmitButtonProps) => {
+  const searchValueToLowerCase = searchValue.toLocaleLowerCase();
   return (
     <S.Container>
-      <S.Button onClick={() => savePokemon(searchValue)}>Submit</S.Button>
+      <S.Button onClick={() => savePokemon(searchValueToLowerCase)}>
+        Submit
+      </S.Button>
     </S.Container>
   );
 };

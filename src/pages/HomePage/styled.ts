@@ -17,14 +17,19 @@ export const PokedexContainer = styled.div`
   background-color: #fffef2;
   box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
-export const PokeStats = styled.p`
+export const PokeStats = styled.div`
   margin: 1.5rem 0rem;
   line-height: 170%;
   font-size: 1rem;
+  background-color: green;
+  display: flex;
+  width: 80%;
 `;
-
 export const RulesHeader = styled.h2`
   font-weight: bold;
   letter-spacing: 0.3rem;
