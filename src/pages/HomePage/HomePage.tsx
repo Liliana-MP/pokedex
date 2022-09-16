@@ -4,7 +4,7 @@ import Search from "../../components/Search";
 import { getPokemon } from "../../utils/api";
 import PokeData from "../../components/PokeData";
 import { Pokemon } from "../../types";
-import { promiseToast } from "../../utils/toast";
+import { errorToast, promiseToast } from "../../utils/toast";
 import { getColor } from "../../utils";
 
 const HomePage = () => {
@@ -17,10 +17,14 @@ const HomePage = () => {
   };
 
   const savePokemon = (searchValue: string) => {
-    promiseToast(
-      getPokemon(searchValue).then((response) => setPokemon(response.data))
-    );
-    setSearchValue("");
+    if (searchValue === "") {
+      errorToast("No input! Try again!");
+    } else {
+      promiseToast(
+        getPokemon(searchValue).then((response) => setPokemon(response.data))
+      );
+      setSearchValue("");
+    }
   };
 
   return (

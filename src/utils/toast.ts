@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { toast } from "react-toastify";
 
-export const ErrorToast = (errorMessage: String) => {
+export const errorToast = (errorMessage: String) => {
   toast.error(`${errorMessage}`, {
     position: "top-center",
     autoClose: 5000,

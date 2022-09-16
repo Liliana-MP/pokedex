@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const Button = styled.button`
-  font-size: 16px;
-  height: 20%;
+  font-size: 20px;
   border-radius: 10px;
   background-color: #ff0000;
   cursor: pointer;
