@@ -11,14 +11,16 @@ type SearchProps = {
 const Search = ({ savePokemon, onChangeText, searchValue }: SearchProps) => {
   return (
     <S.Container>
-      <S.HeaderContainer>
-        <S.Header>Welcome to Pokédex.</S.Header>
-        <S.Text>Search for a pokémons with its name or id</S.Text>
-      </S.HeaderContainer>
-      <S.SearchContainer>
-        <InputField onChangeText={onChangeText} />
-        <SubmitButton searchValue={searchValue} savePokemon={savePokemon} />
-      </S.SearchContainer>
+      <S.ContainerBox>
+        <S.HeaderContainer>
+          <S.Header>Welcome to Pokédex.</S.Header>
+          <S.Text>Search for a pokémons with its name or id</S.Text>
+        </S.HeaderContainer>
+        <S.SearchContainer>
+          <InputField onChangeText={onChangeText} />
+          <SubmitButton searchValue={searchValue} savePokemon={savePokemon} />
+        </S.SearchContainer>
+      </S.ContainerBox>
     </S.Container>
   );
 };

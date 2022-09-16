@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
+type PokedexContainerProps = {
+  backgroundColor?: string;
+};
+
 export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   display: flex;
 `;
 
-export const PokedexContainer = styled.div`
+export const PokedexContainer = styled.div<PokedexContainerProps>`
   width: 60vw;
   height: 60vh;
   padding: 2rem 2rem;
-  background-color: #f5f3f0;
+  background-color: ${(props) => props.backgroundColor};
   box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   display: flex;

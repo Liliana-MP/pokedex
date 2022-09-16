@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
-type StyledProps = {
-  backgroundColor?: string;
-};
-
-export const Container = styled.div<StyledProps>`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: ${(props) => props.backgroundColor};
 `;
 
 export const PokeNameContainer = styled.div`

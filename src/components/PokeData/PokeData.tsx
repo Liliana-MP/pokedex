@@ -12,9 +12,8 @@ const PokeData = ({ pokemon }: PokeDataProps) => {
 
   //TODO: GÖR TYPE IKON TILL EN IKON BREDVID IMAGE ISTÄLLET FÖR BAKGRUND
   if (pokemon) {
-    const pokeType = pokemon?.types[0].type.name;
     return (
-      <S.Container backgroundColor={getBackground(pokeType)}>
+      <S.Container>
         <S.PokeNameContainer>
           <h1>{pokemon.name.toLocaleUpperCase()}</h1>
         </S.PokeNameContainer>
