@@ -6,15 +6,17 @@ export const Button = styled.button`
   font-size: 16px;
   height: 20%;
   border-radius: 10px;
-  background-color: #c2fbd7;
+  background-color: #ff0000;
   cursor: pointer;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
   border: 0;
   transition: all 250ms;
+  color: white;
+  font-weight: bold;
 
   &:hover {
-    background-color: #9fe3b8;
+    background-color: #cc0000;
   }
 `;

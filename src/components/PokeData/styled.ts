@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type StyledProps = {
-  backgroundImage?: string;
+  backgroundColor?: string;
 };
 
 export const Container = styled.div<StyledProps>`
@@ -9,7 +9,7 @@ export const Container = styled.div<StyledProps>`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-image: ${(props) => props.backgroundImage};
+  background-color: ${(props) => props.backgroundColor};
 `;
 
 export const PokeNameContainer = styled.div`

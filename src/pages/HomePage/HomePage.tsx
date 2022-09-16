@@ -22,15 +22,13 @@ const HomePage = () => {
 
   return (
     <S.Container>
+      <Search
+        searchValue={searchValue}
+        onChangeText={onChangeText}
+        savePokemon={savePokemon}
+      />
       <S.PokedexContainer>
-        <Search
-          searchValue={searchValue}
-          onChangeText={onChangeText}
-          savePokemon={savePokemon}
-        />
-        <S.PokeStats>
-          <PokeData pokemon={pokemon} />
-        </S.PokeStats>
+        <S.PokeStats>{pokemon && <PokeData pokemon={pokemon} />}</S.PokeStats>
       </S.PokedexContainer>
     </S.Container>
   );

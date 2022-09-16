@@ -19,7 +19,7 @@ export const POKEMON_TYPES = {
 export const getBackground = (type: string) => {
   switch (type) {
     case POKEMON_TYPES.FIRE:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/5/56/Pokémon_Fire_Type_Icon.svg)";
+      return "red";
     case POKEMON_TYPES.WATER:
       return "url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg)";
     case POKEMON_TYPES.GRASS:

@@ -10,7 +10,7 @@ const SubmitButton = ({ searchValue, savePokemon }: SubmitButtonProps) => {
   return (
     <S.Container>
       <S.Button onClick={() => savePokemon(searchValueToLowerCase)}>
-        Submit
+        Search
       </S.Button>
     </S.Container>
   );

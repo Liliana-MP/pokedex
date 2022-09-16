@@ -4,20 +4,17 @@ import { getBackground } from "../../utils";
 import * as S from "./styled";
 
 type PokeDataProps = {
-  pokemon: Pokemon | undefined;
+  pokemon?: Pokemon;
 };
 
 const PokeData = ({ pokemon }: PokeDataProps) => {
   const pokeImageFront = pokemon?.sprites.front_default;
-  let pokeType = "";
 
-  pokemon?.types.map((type) => {
-    pokeType = type.type.name.toLocaleLowerCase();
-  });
   //TODO: GÖR TYPE IKON TILL EN IKON BREDVID IMAGE ISTÄLLET FÖR BAKGRUND
   if (pokemon) {
+    const pokeType = pokemon?.types[0].type.name;
     return (
-      <S.Container backgroundImage={getBackground(pokeType)}>
+      <S.Container backgroundColor={getBackground(pokeType)}>
         <S.PokeNameContainer>
           <h1>{pokemon.name.toLocaleUpperCase()}</h1>
         </S.PokeNameContainer>

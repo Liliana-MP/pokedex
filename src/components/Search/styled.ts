@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 40%;
+  background-color: green;
+  margin: 2rem 0rem;
 `;
 
 export const HeaderContainer = styled.div`
@@ -22,7 +23,5 @@ export const Text = styled.span`
 
 export const SearchContainer = styled.div`
   align-items: center;
-
-  background-color: violet;
   display: flex;
 `;

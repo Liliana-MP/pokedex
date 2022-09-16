@@ -1,30 +1,28 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   display: flex;
-  flex-direction: row;
-  height: 100vh;
 `;
 
 export const PokedexContainer = styled.div`
-  width: 80%;
-  height: 70%;
+  width: 60vw;
+  height: 60vh;
   padding: 2rem 2rem;
-  margin: 0rem 0rem 2rem 2rem;
-  background-color: #fffef2;
+  background-color: #f5f3f0;
   box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const PokeStats = styled.div`
-  margin: 1.5rem 0rem;
   display: flex;
   width: 80%;
+  background-color: lilac;
 `;
 export const RulesHeader = styled.h2`
   font-weight: bold;

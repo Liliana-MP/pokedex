@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Pokemon-Solid";
+  src: local("Pokemon-Solid"), url(./fonts/Pokemon-Solid.woff) format("woff");
+}
+@font-face {
+  font-family: "Pokemon-Hollow";
+  src: local("Pokemon-Hollow"), url(./fonts/Pokemon-Hollow.woff) format("woff");
+}
