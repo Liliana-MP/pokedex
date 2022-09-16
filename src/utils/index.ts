@@ -2,6 +2,7 @@ export const POKEMON_TYPES = {
   FIRE: "fire",
   WATER: "water",
   GRASS: "grass",
+  FLYING: "flying",
   BUG: "bug",
   ELECTRIC: "electric",
   PSYCHIC: "psychic",
@@ -23,6 +24,8 @@ export const getBackground = (type: string) => {
       return "url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg)";
     case POKEMON_TYPES.GRASS:
       return "url(https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg)";
+    case POKEMON_TYPES.FLYING:
+      return "url(https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg)";
     case POKEMON_TYPES.BUG:
       return "url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg)";
     case POKEMON_TYPES.ELECTRIC:

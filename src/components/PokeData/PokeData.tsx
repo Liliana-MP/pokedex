@@ -14,7 +14,7 @@ const PokeData = ({ pokemon }: PokeDataProps) => {
   pokemon?.types.map((type) => {
     pokeType = type.type.name.toLocaleLowerCase();
   });
-
+  //TODO: GÖR TYPE IKON TILL EN IKON BREDVID IMAGE ISTÄLLET FÖR BAKGRUND
   if (pokemon) {
     return (
       <S.Container backgroundImage={getBackground(pokeType)}>
@@ -47,7 +47,7 @@ const PokeData = ({ pokemon }: PokeDataProps) => {
     );
   }
 
-  return <S.Container>PokeData</S.Container>;
+  return <S.Container>Pokedex</S.Container>;
 };
 
 export default PokeData;

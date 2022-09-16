@@ -4,7 +4,7 @@ import Search from "../../components/Search";
 import { getPokemon } from "../../utils/api";
 import PokeData from "../../components/PokeData";
 import { Pokemon } from "../../types";
-import { toast, ToastContainer } from "react-toastify";
+import { promiseToast } from "../../utils/toast";
 
 const HomePage = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();
@@ -15,21 +15,9 @@ const HomePage = () => {
   };
 
   const savePokemon = (searchValue: string) => {
-    getPokemon(searchValue)
-      .then((response) => {
-        setPokemon(response.data);
-      })
-      .catch((error) =>
-        toast.error("ERROR", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        })
-      );
+    promiseToast(
+      getPokemon(searchValue).then((response) => setPokemon(response.data))
+    );
   };
 
   return (
