@@ -5,7 +5,7 @@ First step is to clone the project. Stand in your preferred folder and run:
 git clone https://github.com/Liliana-MP/pokedex.git
 ```
 ## Second step
-To start the frontend you first need to stand in the frontend folder and run:
+To start the application you need stand in the project folder and then run:
 ```bash
 yarn install
 ```
