@@ -17,7 +17,7 @@ const Search = ({ savePokemon, onChangeText, searchValue }: SearchProps) => {
           <S.Text>Search for a pokémons with its name or id</S.Text>
         </S.HeaderContainer>
         <S.SearchContainer>
-          <InputField onChangeText={onChangeText} />
+          <InputField value={searchValue} onChangeText={onChangeText} />
           <SubmitButton searchValue={searchValue} savePokemon={savePokemon} />
         </S.SearchContainer>
       </S.ContainerBox>

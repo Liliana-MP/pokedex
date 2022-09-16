@@ -14,7 +14,13 @@ export const PokedexContainer = styled.div<PokedexContainerProps>`
   width: 60vw;
   height: 60vh;
   padding: 2rem 2rem;
-  background-color: ${(props) => props.backgroundColor};
+
+  background: linear-gradient(
+    180deg,
+    #f0f3f5 0%,
+    ${(props) => props.backgroundColor} 87%
+  );
+
   box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   display: flex;

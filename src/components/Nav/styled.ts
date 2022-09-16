@@ -10,7 +10,7 @@ export const Header = styled.nav`
 
 export const Logo = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: #f0f3f5;
   font-size: 2rem;
   font-family: "Pokemon-Solid";
 `;

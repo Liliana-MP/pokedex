@@ -9,5 +9,6 @@ export const Style = createGlobalStyle`
 }
 body {
     background-color: lightblue;
+    font-family: "Montserrat-Light"
 }
 `;

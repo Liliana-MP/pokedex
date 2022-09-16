@@ -14,39 +14,50 @@ export const POKEMON_TYPES = {
   DRAGON: "dragon",
   FAIRY: "fairy",
   NORMAL: "normal",
+  DARK: "dark",
+  ICE: "ice",
+  FIGHTING: "fighting",
 };
 
-export const getBackground = (type: string) => {
+export const getColor = (type: string) => {
   switch (type) {
     case POKEMON_TYPES.FIRE:
-      return "red";
+      return "#EE8130";
     case POKEMON_TYPES.WATER:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg)";
+      return "#6390F0";
     case POKEMON_TYPES.GRASS:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg)";
+      return "#7AC74C";
     case POKEMON_TYPES.FLYING:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg)";
+      return "#A98FF3";
     case POKEMON_TYPES.BUG:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg)";
+      return "#A6B91A";
     case POKEMON_TYPES.ELECTRIC:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg)";
+      return "#F7D02C";
     case POKEMON_TYPES.PSYCHIC:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/a/ab/Pok%C3%A9mon_Psychic_Type_Icon.svg)";
+      return "#F95587";
     case POKEMON_TYPES.POISON:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg)";
+      return "#A33EA1";
     case POKEMON_TYPES.GROUND:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/8/8d/Pok%C3%A9mon_Ground_Type_Icon.svg)";
+      return "#E2BF65";
     case POKEMON_TYPES.GHOST:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Pok%C3%A9mon_Ghost_Type_Icon.svg)";
+      return "#735797";
     case POKEMON_TYPES.ROCK:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/b/bb/Pok%C3%A9mon_Rock_Type_Icon.svg)";
+      return "#B6A136";
     case POKEMON_TYPES.STEEL:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/3/38/Pok%C3%A9mon_Steel_Type_Icon.svg)";
+      return "#B7B7CE";
     case POKEMON_TYPES.DRAGON:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/a/a6/Pok%C3%A9mon_Dragon_Type_Icon.svg)";
+      return "#6F35FC";
     case POKEMON_TYPES.FAIRY:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/0/08/Pok%C3%A9mon_Fairy_Type_Icon.svg)";
+      return "#D685AD";
     case POKEMON_TYPES.NORMAL:
-      return "url(https://upload.wikimedia.org/wikipedia/commons/a/aa/Pok%C3%A9mon_Normal_Type_Icon.svg)";
+      return "#A8A77A";
+    case POKEMON_TYPES.DARK:
+      return "#705746";
+    case POKEMON_TYPES.ICE:
+      return "#96D9D6";
+    case POKEMON_TYPES.FIGHTING:
+      return "#C22E28";
+    default:
+      return "black";
   }
 };

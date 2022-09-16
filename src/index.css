@@ -6,3 +6,18 @@
   font-family: "Pokemon-Hollow";
   src: local("Pokemon-Hollow"), url(./fonts/Pokemon-Hollow.woff) format("woff");
 }
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-SemiBold"),
+    url(./fonts/Montserrat-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: local("Montserrat-Light"),
+    url(./fonts/Montserrat-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url(./fonts/Montserrat-Bold.ttf) format("truetype");
+}

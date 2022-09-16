@@ -5,7 +5,7 @@ import { getPokemon } from "../../utils/api";
 import PokeData from "../../components/PokeData";
 import { Pokemon } from "../../types";
 import { promiseToast } from "../../utils/toast";
-import { getBackground } from "../../utils";
+import { getColor } from "../../utils";
 
 const HomePage = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();
@@ -20,6 +20,7 @@ const HomePage = () => {
     promiseToast(
       getPokemon(searchValue).then((response) => setPokemon(response.data))
     );
+    setSearchValue("");
   };
 
   return (
@@ -30,7 +31,7 @@ const HomePage = () => {
         savePokemon={savePokemon}
       />
       <S.PokedexContainer
-        backgroundColor={pokeType ? getBackground(pokeType) : "white"}
+        backgroundColor={pokeType ? getColor(pokeType) : "white"}
       >
         <S.PokeStats>{pokemon && <PokeData pokemon={pokemon} />}</S.PokeStats>
       </S.PokedexContainer>
